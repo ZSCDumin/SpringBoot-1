@@ -16,4 +16,4 @@ spring:
     content-type: text/html
 server:
   port: 8080
-  context-path: /laws
+  context-path: /law_consult

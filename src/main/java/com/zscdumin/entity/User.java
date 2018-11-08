@@ -35,6 +35,9 @@ public class User {
     private Integer age;
     private boolean sex;
     private String phone;
+    private String email;
+    private String certificateNumber;
+    private String lawFirm;
     private String address;
-    private int role;
+    private Integer role;
 }

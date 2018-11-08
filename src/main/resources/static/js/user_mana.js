@@ -4,7 +4,7 @@ $(function () {
         .datagrid(
             {
                 title: '用户列表',
-                url: '/user/getAll',
+                url: '/law_consult/user/all',
                 fitColumns: true, /* 自适应宽度 */
                 striped: true, /* 斑马线效果 */
                 pagination: true, /* 底部显示分页工具栏 */
@@ -14,9 +14,7 @@ $(function () {
                 iconCls: 'icon-ok',
                 checkOnSelect: true, /* 点击行的时候该复选框就会被选中或取消选中 */
                 selectOnCheck: true, /* 单击复选框将永远选择行 */
-                pagination: true,
                 nowrap: true,
-                rownumbers: true,
                 collapsible: true,//是否可折叠的
                 pageSize: 5,//每页显示的记录条数，默认为10 
                 pageList: [2, 4, 5],//可以设置每页记录条数的列表 
@@ -115,6 +113,46 @@ $(function () {
                         align: 'center'
                     },
                     {
+                        field: 'phone',
+                        title: '电话',
+                        width: 100,
+                        height: 100,
+                        editor: 'text',
+                        align: 'center'
+                    },
+                    {
+                        field: 'email',
+                        title: '邮箱',
+                        width: 100,
+                        height: 100,
+                        editor: 'text',
+                        align: 'center'
+                    },
+                    {
+                        field: 'certificateNumber',
+                        title: '执业证号',
+                        width: 100,
+                        height: 100,
+                        editor: 'text',
+                        align: 'center'
+                    },
+                    {
+                        field: 'lawFirm',
+                        title: '职业律所',
+                        width: 100,
+                        height: 100,
+                        editor: 'text',
+                        align: 'center'
+                    },
+                    {
+                        field: 'address',
+                        title: '地址',
+                        width: 100,
+                        height: 100,
+                        editor: 'text',
+                        align: 'center'
+                    },
+                    {
                         field: 'role',
                         title: '角色',
                         width: 100,
@@ -172,6 +210,7 @@ function saverow(index) {
     $("#dg").datagrid("endEdit", index);
     var row = $("#dg").datagrid("getSelected");
     if (addFlags) {
+        console.log("1111111");
         dbSave(row);
     } else {
         dbAdd(row);
@@ -181,7 +220,7 @@ function saverow(index) {
 
 function canclerow(index) {
     $("#dg").datagrid("rejectChanges");
-    $('#dg').datagrid('reload');
+    $("#dg").datagrid('reload');
     addFlags = true;
 }
 
@@ -192,66 +231,100 @@ function dbSave(row) {
     var name = row.name;
     var age = row.age;
     var sex = row.sex;
+    var phone = row.phone;
+    var email = row.email;
+    var certificateNumber = row.certificateNumber;
+    var lawFirm = row.lawFirm;
+    var address = row.address;
     var role = row.role;
-    $.post("/user/update", {
-        ID: id,
-        account: account,
-        password: password,
-        name: name,
-        age: age,
-        sex: sex,
-        role: role,
-    }, function (data) {
-        if (data == 1) {
-            alert("修改成功");
-        } else {
-            alert("修改失败");
+    console.log(id + account + password + name + age + sex + phone + email + certificateNumber + lawFirm + address + role);
+    $.ajax({
+        type: "post",
+        url: "/law_consult/user/update",
+        contentType: "application/json;charset=utf-8",
+        data: JSON.stringify({
+            id: id,
+            account: account,
+            password: password,
+            name: name,
+            age: age,
+            sex: sex,
+            phone: phone,
+            email: email,
+            certificateNumber: certificateNumber,
+            lawFirm: lawFirm,
+            address: address,
+            role: role
+        }),
+        dataType: "json",
+        success: function (data) {
+            if (data === 1) {
+                alert("修改成功");
+            } else {
+                alert("修改失败");
+            }
+        },error:function(error){
+            console.log(error);
         }
     });
-    alert(row.account + "-" + row.password + "-" + row.name + "-" + row.age + "-" + row.sex + "-" + row.role);
 }
 
 function dbDelete(row) {
-    if (row.length == 0) {
+    if (row.length === 0) {
         $.messager.alert("提示:", "请选择删除的数据");
         return;
     }
     var id = row.id;
-    $.post("/user/delete", {
-        ID: id
+    $.post("/law_consult/user/delete", {
+        id: id
     }, function (data) {
-        if (data > 0) {
+        if (data === 1) {
             $('#dg').datagrid('reload');
             alert("删除成功");
         } else {
             alert("删除失败");
         }
     });
-    alert(row.account + "-" + row.password + "-" + row.name + "-" + row.age + "-" + row.sex + "-" + row.role);
 }
 
 function dbAdd(row) {
-    var id = row.id;
     var account = row.account;
     var password = row.password;
     var name = row.name;
     var age = row.age;
     var sex = row.sex;
+    var phone = row.phone;
+    var email = row.email;
+    var certificateNumber = row.certificateNumber;
+    var lawFirm = row.lawFirm;
+    var address = row.address;
     var role = row.role;
-    $.post("/user/add", {
-        ID: id,
-        account: account,
-        password: password,
-        name: name,
-        age: age,
-        sex: sex,
-        role: role,
-    }, function (count) {
-        if (count == 1) {
-            alert("添加成功");
-        } else {
-            alert("添加失败");
+    $.ajax({
+        type: "post",
+        url: "/law_consult/user/add",
+        contentType: "application/json;charset=utf-8",
+        data: JSON.stringify({
+            account: account,
+            password: password,
+            name: name,
+            age: age,
+            sex: sex,
+            phone: phone,
+            email: email,
+            certificateNumber: certificateNumber,
+            lawFirm: lawFirm,
+            address: address,
+            role: role
+        }),
+        dataType: "json",
+        success: function (data) {
+            if (data === 1) {
+                alert("添加成功");
+            } else {
+                alert("添加失败");
+            }
+        },error:function(error){
+            console.log(error);
         }
     });
-    alert(row.account + "-" + row.password + "-" + row.name + "-" + row.age + "-" + row.sex + "-" + row.role);
 }

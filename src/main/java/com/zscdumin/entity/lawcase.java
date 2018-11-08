@@ -28,8 +28,8 @@ public class lawcase {
     @Id
     @GeneratedValue
     private int id;
-    private String img_url;
-    private String content_url;
+    private String imgUrl;
+    private String contentUrl;
     private String datetime;
 }
 
