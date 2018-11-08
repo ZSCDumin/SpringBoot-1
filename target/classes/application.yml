@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://115.157.192.47:3306/test?useSSL=true
+    username: root
+    password: 123456
+  jpa:
+   hibernate:
+     ddl-auto: update
+   show-sql: true
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+server:
+  port: 8080
+  context-path: /law_consult
