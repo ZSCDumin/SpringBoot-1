@@ -2,7 +2,6 @@ package com.zscdumin.controller;
 
 import com.zscdumin.entity.User;
 import com.zscdumin.service.UserRepository;
-import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
