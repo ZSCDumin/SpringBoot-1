@@ -1,5 +1,7 @@
 package com.zscdumin.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.zscdumin.entity.User;
 import com.zscdumin.service.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +33,15 @@ public class UserController {
             return 0;
         }
     }
+
+    @RequestMapping(value = "/allByPage", method = RequestMethod.POST)
+    public PageInfo<User> findAllByPage() {
+        PageHelper.startPage(1, 3);
+        List<User> userList = userRepository.findAll();
+        PageInfo<User> pageInfo = new PageInfo<>(userList);
+        return pageInfo;
+    }
+
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public int userUpdate(@RequestBody User user) {
