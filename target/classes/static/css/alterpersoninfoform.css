@@ -1,0 +1,105 @@
+.global{
+    margin-top: 20px;
+    margin-left: 20px;
+    border-top: 1px #D3D3D3 solid;
+}
+
+.basicinfo{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 100px;
+    float: left;
+}
+
+.lable1{
+    width: 5px;
+    height: 20px;
+    background-color: #0084f6;
+    float: left;
+}
+
+.lable2{
+    line-height: 20px;
+    font-size: 15px;
+    font-family: "Microsoft YaHei";
+    margin-left: 10px;
+}
+
+.cc{
+    clear: both;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.bianqian{
+    font-size: 15px;
+    height: 40px;
+}
+
+.id1{
+    background-color: #F4F4F4;
+    width: 200px;
+    height: 40px;
+    border: 1px #D3D3D3 solid;
+    font-size: 15px;
+    color: #888888;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.id{
+    width: 200px;
+    height: 40px;
+    border: 1px #D3D3D3 solid;
+    font-size: 15px;
+    color: #888888;
+    padding-left: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.connectinfo{
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+}
+
+.but{
+    clear: both;
+    margin-left: 100px;
+    margin-top: 600px;
+}
+
+.button1{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #3695cc;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+.button1:hover{
+    background-color: #0070c1 ;
+}
+
+.button2{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    color: #3695cc;
+    font-size: 16px;
+    border: 1px solid #3695cc;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
+.button2:hover{
+    background-color: #D3D3D3;
+}
+

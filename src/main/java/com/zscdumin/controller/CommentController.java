@@ -51,4 +51,15 @@ public class CommentController {
             return 0;
         }
     }
+
+//    @RequestMapping(value = "/findByAnyFiledLike", method = RequestMethod.POST)
+//    public int findByAnyFiledLike(@RequestParam(value = "anyFiled") String anyFiled) {
+//        try {
+//            commentRepository.findByAnyFiledLike(anyFiled);
+//            return 1;
+//        } catch (Exception e) {
+//            System.out.println(e.getMessage());
+//            return 0;
+//        }
+//    }
 }

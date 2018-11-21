@@ -12,7 +12,7 @@ import java.util.List;
  * @author ZSCDumin
  */
 @RestController
-@RequestMapping(value = "/law")
+@RequestMapping(value = "/lawCase")
 public class LawCaseController {
 
     @Autowired
@@ -51,4 +51,14 @@ public class LawCaseController {
             return 0;
         }
     }
+//    @RequestMapping(value = "/findByAnyFiledLike", method = RequestMethod.POST)
+//    public int findByAnyFiledLike(@RequestParam(value = "anyFiled") String anyFiled) {
+//        try {
+//            lawCaseRepository.findByAnyFiledLike(anyFiled);
+//            return 1;
+//        } catch (Exception e) {
+//            System.out.println(e.getMessage());
+//            return 0;
+//        }
+//    }
 }

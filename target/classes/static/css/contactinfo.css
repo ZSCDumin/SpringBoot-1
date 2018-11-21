@@ -1,0 +1,55 @@
+.r_bottom{
+
+}
+
+.r_bottom_top{
+    border-bottom: 1px #D3D3D3 solid;
+    height: 30px;
+}
+
+.tubiao{
+    height: 20px;
+    width: 5px;
+    background-color: #0084f6;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.jibenxinxi{
+    height: 20px;
+    font-size: 10px;
+    margin-top: 6px;
+    margin-left: 5px;
+    float: left;
+}
+
+.r_bottom_bottom{
+    clear: both;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    margin-left: 40px;
+}
+
+.changecolor:hover{
+    background-color: #B4CDCD;
+}
+
+.lei{
+    width: 200px;
+    height: 40px;
+    border-style: none;
+    border-bottom: 1px #D3D3D3 solid;
+}
+
+.zhi {
+    width: 500px;
+    height: 40px;
+    border-style: none;
+    border-bottom: 1px #D3D3D3 solid;
+    padding: 0;
+    margin: 0;
+    background-color: #E0EEEE;
+    text-align: center;
+}

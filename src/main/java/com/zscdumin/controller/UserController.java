@@ -62,4 +62,17 @@ public class UserController {
             return 0;
         }
     }
+
+    @RequestMapping(value = "/findByAnyFiledLike", method = RequestMethod.POST)
+    public int findByAnyFiledLike(@RequestParam(value = "anyFiled") String anyFiled) {
+        try {
+            userRepository.findByAnyFiledLike(anyFiled);
+            System.out.println(userRepository.findByAnyFiledLike(anyFiled));
+            return 1;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return 0;
+        }
+    }
+
 }

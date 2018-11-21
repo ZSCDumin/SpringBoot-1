@@ -1,0 +1,80 @@
+.container {
+    margin: 0px auto;
+    width: 800px;
+}
+.ijs {
+    border-top: 1px solid #FFE1E1;
+
+}
+.wwf {
+    width: 700px;
+    height: 290px;
+    margin: 0 auto;
+    background: #FFE1E1;
+    padding-left: 50px;
+}
+.wwf span {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+}
+.ihf {
+    width: 700px;
+    height: 150px;
+    margin-top: 8px;
+}
+.ihfs {
+    width: 650px;
+    height: 150px;
+}
+.jjjjj button {
+    width: 60px;
+    height: 40px;
+    background: rgb(255, 153, 0);
+    border-style: none;
+    border-radius: 5px;
+    margin-left: 552px;
+    margin-top: 30px;
+}
+.hsioho {
+    background: rgb(248,248,248);
+    height: 40px;
+    width: 750px;
+    margin: 0 auto;
+}
+.hsgsa {
+    display: flex;
+    margin-top: 30px;
+    height: 40px;
+    line-height: 40px;
+
+}
+.hsgsa div {
+    width: 80px;
+    text-align: center;
+}
+.wwfll {
+    background: #ffffff;
+    border-top: 2px solid green;
+    color: green;
+}
+.osjs {
+    margin-left: 25px;
+    margin-top: 25px;
+}
+.osjs img {
+    width: 750px;
+}
+.xuexi{
+    font-size: 22px;
+    margin-top: 20px;
+}
+.des{
+    line-height: 35px;
+    margin: 20px 100px 20px 100px;
+    font-size: 16px;
+    color: #000;
+
+}
