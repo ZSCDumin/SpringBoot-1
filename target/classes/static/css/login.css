@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../font/Montserrat-Regular.ttf");
+}
+
+body {
+    background-image: url("../img/login-bg.jpg");
+}
+
+.container {
+    background: #cccccc;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.heard {
+    display: flex;
+    border-bottom: 1px solid green;
+    margin-top: 30px;
+    padding: 20px 0 0 25px;
+}
+
+.heard div {
+    font-family: Montserrat;
+    font-size: 18px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.heard .text {
+    color: rgb(255, 136, 0);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+input {
+    border-style: none;
+    height: 50px;
+    width: 330px;
+    display: block;
+    margin: 10px auto;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 18px;
+    font-family: Montserrat;
+}
+
+.container .foot {
+    width: 330px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin: 45px auto 10px;
+}
+
+.container .foot .mid a {
+    cursor: pointer;
+}
+
+.container .foot .foot-left a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.container .foot .foot-right a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.container .login {
+    width: 330px;
+    height: 50px;
+    font-family: Montserrat;
+    font-size: 22px;
+    text-align: center;
+    line-height: 50px;
+    margin: 10px auto 20px;
+    border-radius: 5px;
+}
+
+.container .login a {
+    text-decoration: none;
+    color: white;
+    background: rgb(255, 136, 0);
+    display: block;
+}
+
+.container .register {
+    color: rgb(255,136,0);
+    text-align: center;
+    cursor: pointer;
+}
+
+.container .register a {
+    text-decoration: none;
+    color: rgb(255,136,0);
+}

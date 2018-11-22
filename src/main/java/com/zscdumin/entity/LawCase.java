@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Date;
 
 /**
  * 说明:
@@ -30,6 +31,7 @@ public class LawCase {
     private int id;
     private String imgUrl;
     private String contentUrl;
-    private String datetime;
+    private Date datetime;
+    private String caseType;
 }
 

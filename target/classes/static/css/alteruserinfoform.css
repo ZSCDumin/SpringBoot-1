@@ -1,0 +1,78 @@
+.global{
+    width: 100%;
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    border-bottom: 1px solid #B8B8B8;
+    top: 0;
+}
+
+.img1{
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+}
+
+.name{
+    line-height: 60px;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.sex{
+    line-height: 60px;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.uid{
+    line-height: 60px;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.caidan{
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    margin-bottom: 5px;
+}
+
+.cul{
+    padding: 0px;
+    margin: 0px;
+    line-height: 5px;
+}
+
+.cli{
+    margin-left: 5px;
+    float: left;
+    list-style: none;
+}
+
+.cli_a{
+    text-decoration: none;
+    color: #000;
+}
+
+.content {
+    margin-top: 81px;
+    margin-left: 20px;
+}
+
+.win{
+    frameborder: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
