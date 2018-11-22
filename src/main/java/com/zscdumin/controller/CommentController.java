@@ -18,7 +18,7 @@ public class CommentController {
     @Autowired
     private CommentRepository commentRepository;
 
-    @RequestMapping(value = "/all", method = RequestMethod.POST)
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<Comment> commentList() {
         return commentRepository.findAll();
     }
@@ -52,14 +52,13 @@ public class CommentController {
         }
     }
 
-//    @RequestMapping(value = "/findByAnyFiledLike", method = RequestMethod.POST)
-//    public int findByAnyFiledLike(@RequestParam(value = "anyFiled") String anyFiled) {
-//        try {
-//            commentRepository.findByAnyFiledLike(anyFiled);
-//            return 1;
-//        } catch (Exception e) {
-//            System.out.println(e.getMessage());
-//            return 0;
-//        }
-//    }
+    @RequestMapping(value = "/findByAnyFiledLike", method = RequestMethod.POST)
+    public List<Comment> findByAnyFiledLike(@RequestParam(value = "anyFiled") String anyFiled) {
+        try {
+            return commentRepository.findByAnyFiledLike(anyFiled);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
 }

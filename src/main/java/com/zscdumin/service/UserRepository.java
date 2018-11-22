@@ -8,6 +8,26 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
-    @Query(value = "select * from user where name like CONCAT('%',:anyFiled,'%')", nativeQuery = true)
+    @Query(value = "SELECT\n" +
+            "\t* \n" +
+            "FROM\n" +
+            "\tuser as u \n" +
+            "WHERE\n" +
+            "\tCONCAT(\n" +
+            "\tIFNULL( u.id, '' ),\n" +
+            "\tIFNULL( u.account, '' ),\n" +
+            "\tIFNULL( u.address, '' ),\n" +
+            "\tIFNULL( u.age, '' ),\n" +
+            "\tIFNULL( u.certificate_number, '' ),\n" +
+            "\tIFNULL( u.email, '' ),\n" +
+            "\tIFNULL( u.law_firm, '' ),\n" +
+            "\tIFNULL( u.`name`, '' ),\n" +
+            "\tIFNULL( u.`password`, '' ),\n" +
+            "\tIFNULL( u.phone, '' ),\n" +
+            "\tIFNULL( u.role, '' ),\n" +
+            "\tIFNULL( u.sex, '' ) \n" +
+            "\t) LIKE concat( concat( '%', ?1), '%' ) \n" +
+            "ORDER BY\n" +
+            "\tu.id ASC;", nativeQuery = true)
     List<User> findByAnyFiledLike(@Param("anyFiled") String anyFiled);
 }

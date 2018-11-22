@@ -18,7 +18,7 @@ public class LawController {
     @Autowired
     private LawRepository lawRepository;
 
-    @RequestMapping(value = "/all", method = RequestMethod.POST)
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<Law> lawList() {
         return lawRepository.findAll();
     }
@@ -51,14 +51,13 @@ public class LawController {
             return 0;
         }
     }
-//    @RequestMapping(value = "/findByAnyFiledLike", method = RequestMethod.POST)
-//    public int findByAnyFiledLike(@RequestParam(value = "anyFiled") String anyFiled) {
-//        try {
-//            lawRepository.findByAnyFiledLike(anyFiled);
-//            return 1;
-//        } catch (Exception e) {
-//            System.out.println(e.getMessage());
-//            return 0;
-//        }
-//    }
+    @RequestMapping(value = "/findByAnyFiledLike", method = RequestMethod.POST)
+    public List<Law> findByAnyFiledLike(@RequestParam(value = "anyFiled") String anyFiled) {
+        try {
+            return lawRepository.findByAnyFiledLike(anyFiled);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
 }
