@@ -26,6 +26,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
             "\tIFNULL( u.phone, '' ),\n" +
             "\tIFNULL( u.role, '' ),\n" +
             "\tIFNULL( u.sex, '' ) \n" +
+            "\tIFNULL( u.icon, '' ) \n" +
             "\t) LIKE concat( concat( '%', ?1), '%' ) \n" +
             "ORDER BY\n" +
             "\tu.id ASC;", nativeQuery = true)

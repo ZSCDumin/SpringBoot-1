@@ -34,4 +34,5 @@ public class Comment {
     private int commenter;
     private int commentObjectType;
     private int commentObjectId;
+    private int content_type;
 }

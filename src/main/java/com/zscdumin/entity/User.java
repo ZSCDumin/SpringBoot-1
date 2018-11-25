@@ -40,4 +40,5 @@ public class User {
     private String lawFirm;
     private String address;
     private Integer role;
+    private String icon;
 }
