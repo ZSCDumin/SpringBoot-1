@@ -1,0 +1,39 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+.head{
+	width: 100%;
+    background-color: #f6f6f6;
+    height: 40px;
+    font-family: "Microsoft yahei";
+    border-bottom: 1px solid #e5e5e5;
+}
+.walcome{
+	padding-left: 100px;
+	display: block;
+    line-height: 40px;
+    float: left;
+    font-size: 12px;
+    color: #858585;
+}
+.login{
+	padding: 0px 10px;
+	text-decoration: underline;
+    color: #f93;
+    line-height: 40px;
+    font-size: 12px;
+}
+.registe{
+	text-decoration: none;
+    line-height: 40px;
+    font-size: 12px;
+    color: #858585;
+}
+.link1{
+	margin-left: 500px;
+	text-decoration: none;
+    line-height: 40px;
+    font-size: 12px;
+    color: #858585;
+}

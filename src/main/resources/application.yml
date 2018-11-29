@@ -1,12 +1,12 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://115.157.192.47:3306/test?useSSL=false
+    url: jdbc:mysql://2p277534k9.iok.la:13301/test?useSSL=false
     username: root
     password: 123456
   jpa:
    hibernate:
-     ddl-auto: update
+     ddl-auto: create
    show-sql: true
   thymeleaf:
     prefix: classpath:/templates/
